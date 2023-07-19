@@ -1,18 +1,18 @@
 // Styles
-import { Container, Flex } from "@/styles/Global";
-import { Text } from "@/styles/Text";
-import { Button } from "@/styles/Buttons";
+import { Container, Flex } from '@/styles/Global';
+import { Text } from '@/styles/Text';
+import { Button } from '@/styles/Buttons';
 
 // Components
-import { Stack } from "@/components/Stack";
-import { Project } from "@/components/Project";
-import { Contacts } from "@/components/Contacts";
+import { Stack } from '@/components/Stack';
+import { Project } from '@/components/Project';
+import { Contacts } from '@/components/Contacts';
 
 // Data
-import { stackData } from "@/utils/stackData";
-import { userData } from "@/utils/userData";
+import { stackData } from '@/utils/stackData';
+import { userData } from '@/utils/userData';
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 
 // Page Style
 import {
@@ -25,11 +25,11 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
-} from "./style";
+} from './style';
 
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
-  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+  const portfolioUrl = `https://github.com/${userData.githubUser}/portfolio`;
 
   return (
     <main id="home">
@@ -41,20 +41,20 @@ export const Home = (): JSX.Element => {
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
                 title={userData.nameUser}
-                width={"48px"}
-                height={"48px"}
+                width={'48px'}
+                height={'48px'}
               />
               <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-            I{" "}
+              I{' '}
               <Text as="span" type="heading1" color="brand1">
                 love
-              </Text>{" "}
-              creating and{" "}
+              </Text>{' '}
+              creating and{' '}
               <Text as="span" type="heading1" color="brand1">
                 developing
-              </Text>{" "}
+              </Text>{' '}
               projects
             </Text>
             <Text type="body1" color="grey2">
@@ -71,7 +71,7 @@ export const Home = (): JSX.Element => {
               <Button
                 color="grey5"
                 as="a"
-                css={{ "&:hover": { color: "$grey1" } }}
+                css={{ '&:hover': { color: '$grey1' } }}
                 type="circle"
                 target="_blank"
                 href={gihubUrl}
@@ -95,7 +95,7 @@ export const Home = (): JSX.Element => {
                 My projects
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Some of my{" "}
+                Some of my{' '}
                 <Text as="span" color="brand5">
                   side projects
                 </Text>
