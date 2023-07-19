@@ -1,6 +1,6 @@
-import { useState } from "react";
-import useMedia from "use-media";
-import { userData } from "@/utils/userData";
+import { useState } from 'react';
+import useMedia from 'use-media';
+import { userData } from '@/utils/userData';
 
 import {
   Navbar as NavbarWrapper,
@@ -8,12 +8,12 @@ import {
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
-} from "./style";
+} from './style';
 
-import { FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
-import { Button } from "@/styles/Buttons";
-import { Container, Flex } from "@/styles/Global";
+import { FaBars } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
+import { Button } from '@/styles/Buttons';
+import { Container, Flex } from '@/styles/Global';
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -21,8 +21,7 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
-
-  const isWide = useMedia({ maxWidth: "991px" });
+  const isWide = useMedia({ maxWidth: '991px' });
 
   document.title = userData.nameUser;
 
@@ -43,15 +42,13 @@ export const NavBar = (): JSX.Element => {
             <Button
               type="icon"
               onClick={OpenMenu}
-              aria-label={!open ? "Abrir Menu" : "Fechar Menu"}
+              aria-label={!open ? 'Abrir Menu' : 'Fechar Menu'}
             >
               {!open ? <FaBars /> : <IoClose />}
             </Button>
           )}
         </NavbarMobileArea>
-        <Flex>
-          {isWide ? open && <NavLinks /> : <NavLinks />}
-        </Flex>
+        <Flex>{isWide ? open && <NavLinks /> : <NavLinks />}</Flex>
       </Container>
     </NavbarWrapper>
   );
@@ -64,13 +61,13 @@ export const NavLinks = (): JSX.Element => {
         Home
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#projects`}>
-        Projects
+        Projetos
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#contact`}>
-        Contact
+        Contato
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
-        Social Media
+        Redes sociais
       </Button>
     </NavbarLinks>
   );
