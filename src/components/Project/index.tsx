@@ -27,7 +27,7 @@ export const Project = (): JSX.Element => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos?sort=updated&direction=asc`
+        `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc`
       );
 
       const json = await data.json();
@@ -43,7 +43,8 @@ export const Project = (): JSX.Element => {
     <>
       {repositories &&
         repositories?.map?.((repository) =>
-          repository.name === 'portfolio' ? null : (
+          repository.name === 'portfolio' ||
+          repository.name === 'vitorhugomendes' ? null : (
             <ProjectWrapper key={repository.id}>
               <ProjectTitle
                 as="h2"
